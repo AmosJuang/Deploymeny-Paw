@@ -1,0 +1,72 @@
+.site-footer {
+    background: #313D92;
+    padding: 0;
+    border-top: 1px solid #ddd;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    overflow: visible; /* allow mascot to stick out */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+  
+  /* Left section: Mascot + Contact */
+  .footer-left {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-end;
+  }
+  
+  /* Mascot */
+  .footer-mascot {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .footer-mascot img {
+    width: 25vw;
+    max-width: 250px;
+    height: auto;
+    object-fit: contain;
+    margin-top: -50px; /* pulls head upward */
+    display: block;
+    z-index: 10;
+  }
+  
+  /* Contact Info */
+  .footer-contact {
+    font-size: 0.9rem;
+    color: #fff;
+    line-height: 1.4;
+  }
+  
+  .footer-contact h3 {
+    margin-top: 2.5rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Brand (Right section) */
+  .footer-brand h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2.5rem
+  }
+  
+  /* Copyright text */
+  .copyright {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    margin-bottom: 2.5rem
+  }
+  

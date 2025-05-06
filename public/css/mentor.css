@@ -1,0 +1,125 @@
+/* mentor.css */
+
+/* Styling untuk seluruh bagian mentor */
+.mentor-section {
+    padding: 100px 75px;
+    position: relative;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+      url('/images/MentorPattern.png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+  }
+  
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #313D92;
+    font-weight: 700;
+    position: relative;
+  }
+  h2 strong {
+    color: #E78D4D;
+  }
+  
+  .mentors-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 0 4vw;
+  }
+  
+  .mentor-item {
+    text-align: center;
+    background: linear-gradient(to bottom, #313D92, #E78D4D);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    flex-direction: column;
+
+    /* Removed margin */
+  }
+  
+  
+  .mentor-image {
+    width: 100%;
+    height: 400px;         /* tinggi tetap */
+    object-fit: contain;   /* gambar tidak dipotong */
+    border-radius: 8px;
+  }
+  
+  .mentor-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ffffff;
+    height: 80px;
+    align-content: center;
+  }
+  
+  .mentor-role {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  
+  .mentor-awardee {
+    margin-top: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    align-content: bottom;
+  }
+  
+  .award-title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .award-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #313D92;
+  }
+  
+  .become-a-mentor {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .become-a-mentor p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn-apply {
+    padding: 10px 20px;
+    background-color: #313D92;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-apply:hover {
+    background-color: #2a358d;
+  }
+  
+  /* Responsif untuk perangkat lebih kecil */
+  @media (max-width: 768px) {
+    .mentors-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mentor-item {
+      width: 80%;  /* Lebar 80% untuk perangkat kecil */
+      margin-bottom: 20px;
+    }
+  }
+  

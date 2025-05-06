@@ -1,0 +1,200 @@
+/* General Styles */
+.programs-section {
+  position: relative;
+  background-image:
+    linear-gradient(to bottom, rgba(231, 141, 77, 1), rgba(231, 141, 77, 0)),
+    linear-gradient(to top, rgba(231, 141, 77, 1), rgba(231, 141, 77, 0)),
+    url('/images/ProgramPattern.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+  border-bottom: 1px solid #313D92;
+}
+/* Title Styling */
+.programs-title {
+  padding: 100px;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #313D92;
+  font-weight: 700;
+  position: relative; /* Add relative positioning to the title */
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #313D92;
+}
+
+.programs-title-description {
+  font-size: 18px;
+  text-align: center;
+  color: #444;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 20px auto;
+  font-weight: 400;
+}
+
+/* Decorative Ornaments */
+.header-decor {
+  position: absolute;
+}
+
+.header-ornament {
+  width: 200px; /* Adjust size */
+  max-width: 250px; /* Max width for the ornament */
+}
+
+.top-right {
+  top: -16px; /* Adjust the distance from the top */
+  right: -16px; /* Adjust the distance from the right */
+  transform: rotate(180deg); /* Rotate the ornament */
+}
+
+.bottom-left {
+  bottom: -16px; /* Adjust the distance from the bottom */
+  left: -16px; /* Adjust the distance from the left */
+  transform: rotate(0deg); /* No rotation for the bottom ornament */
+}
+.program-item {
+  border-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.program-content {
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+  margin: 25px auto;  /* Use auto for equal left and right margins */
+  max-width: 1200px;  /* You can adjust this value to limit the width of the content */
+}
+
+/* Ukuran gambar dalam kotak */
+.program-image {
+  width: 100%;
+  max-width: 300px; /* Membatasi lebar gambar */
+  height: auto; /* Menjaga rasio gambar tetap proporsional */
+  object-fit: cover; /* Mengisi kotak secara proporsional */
+  border-radius: 15px 0px 0px 15px;
+}
+
+
+.program-overlay {
+  flex: 1;
+  padding: 25px;
+  color: #444;
+  background: linear-gradient(to bottom, #ffffff, #e2e5ff);
+  border-left: 5px solid #313D92;
+  border-radius: 0px 15px 15px 0px;
+
+}
+
+.program-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #313D92;
+  margin-bottom: 20px;
+  letter-spacing: 1px; /* Menambah jarak antar huruf untuk efek modern */
+}
+
+.program-desc {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6; /* Memperbaiki jarak antar baris untuk keterbacaan */
+}
+
+.program-desc strong {
+  color: #E78D4D;
+}
+
+/* Responsif: Membuat gambar dan isi lebih kecil pada perangkat mobile */
+@media screen and (max-width: 768px) {
+  .program-item {
+      margin-bottom: 30px;
+  }
+
+  .program-content {
+      flex-direction: column;
+  }
+
+  .program-image {
+      width: 100%;
+/* Gambar tetap dalam ukuran kotak yang sesuai */
+  }
+
+  .program-overlay {
+      padding: 20px;
+  }
+
+  .program-text {
+      font-size: 20px;
+  }
+
+  .program-desc {
+      font-size: 15px;
+  }
+}
+
+.cta-section {
+  padding: 80px 20px;
+  background-color: #fff7e6;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.cta-image img {
+  width: 400px;
+  max-width: 100%;
+}
+
+.cta-text {
+  flex: 1;
+}
+
+.cta-text h3 {
+  font-size: 28px;
+  color: #313D92;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cta-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 12px 25px;
+  background-color: #E78D4D;
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #313D92;
+}
+
+.program-price {
+  margin-top: 10px;
+  font-size: 1.25rem;
+}
+.program-price strong {
+  color: #313D92;
+  font-weight: bold;
+}

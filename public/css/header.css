@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.site-header {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #313D92;
+}
+
+.easiswa {
+    font-weight: 500;
+    color: #E78D4D;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #313D92;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #313D92;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Button styling — untouched by nav link styles */
+  .btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem; /* 👈 Make it readable */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+  .login {
+    background-color: transparent;
+    border: 2px solid #313D92;
+    color: #313D92;
+  }
+  
+  .login:hover {
+    background-color: #313D92;
+    color: white;
+  }
+  
+  .register {
+    background-color: #313D92;
+    color: white;
+    border: 2px solid #313D92;
+  }
+  
+  .register:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #313D92;
+    color:#313D92
+  }
+
+  

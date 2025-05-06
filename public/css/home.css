@@ -1,0 +1,290 @@
+.mascot-welcome {
+    background: linear-gradient(to bottom, #ffffff, #f0f4ff);
+    padding: 6rem 4rem;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mascot-welcome .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.mascot-welcome .left-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.mascot-welcome p {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.mascot-welcome .highlight {
+    color: #313D92;
+    font-weight: bold;
+}
+
+.mascot-welcome h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #E78D4D;
+}
+
+.mascot-welcome a {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: #313D92;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.mascot-welcome a:hover {
+    background-color: #4e5bc1;
+}
+
+.mascot-welcome .mascot-image {
+    flex: 1;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+
+.mascot-welcome .dekor-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    z-index: 1;
+}
+
+.why-choose {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Judul */
+  .why-title {
+    background: radial-gradient(circle at center, #8C656F, #313D92);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .why-title h2 {
+    font-size: 2rem;
+    color: #f0f4ff;
+    margin: 0;
+  }
+  
+  /* Isi */
+  .why-body {
+    padding: 4rem 4rem;
+    position: relative;
+    background-image:
+      linear-gradient(to bottom, rgba(231, 141, 77, 1), rgba(231, 141, 77, 0)),
+      linear-gradient(to top, rgba(231, 141, 77, 1), rgba(231, 141, 77, 0)),
+      url('/images/ProgramPattern.png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .reasons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 2rem 5rem;
+  }
+  
+  .reasons li {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #313D92;
+  }
+  
+  .reasons p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+  }
+
+  .reasons li:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .our-program h2{
+    padding: 5rem 0rem 0rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #313D92;
+  }
+  
+  
+  .program-highlight-box {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    background-color:#313D92;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  .highlight-content {
+    position: relative;
+    width: 100%;
+    height: 500px; /* set fixed height */
+    overflow: hidden;
+  }
+  
+  .highlight-content img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 0;
+  }
+  
+  /* Gradient overlay */
+  .highlight-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(49, 61, 146, 0), rgba(49, 61, 146, 0.85));
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Text and button inside the image */
+  .highlight-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+  }
+  
+  .highlight-text {
+    padding: 0rem 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  
+  .highlight-desc {
+    padding: 0.5rem 1.5rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .highlight-btn {
+    background: linear-gradient(to right, #8C656F, #E78D4D);
+    background-size: 200% auto; /* double the width to allow movement */
+    background-position: left center;
+    color: #f0f4ff;
+    border: none;
+    padding: 1.5rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: right;
+    transition: background-position 0.3s ease-in-out;
+  }
+  
+  .highlight-btn:hover {
+    background-position: right center; /* triggers the “roll” */
+    cursor: pointer;
+    color: #313D92;
+    transition: 0.3s ease-in-out;
+
+  }
+  
+.impact-map {
+    padding: 2rem 2rem 10rem 2rem;
+    text-align: center;
+    position: relative;
+    background-image:
+    linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75)),
+    url('/images/MentorPattern.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.country-map {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 1rem;
+}
+
+.counter-overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: -5rem auto 0 auto; /* Pulls it up over the map */
+    flex-wrap: wrap;
+    background-color: rgba(49, 61, 146, 0.85);
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 800px;
+    z-index: 2;
+  }
+  .counter-box {
+    text-align: center;
+    color: #f0f4ff;
+  }
+  
+  .counter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px; /* Enough space for the final number */
+  }
+  
+  .counter-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    min-width: 150px; /* Enough space for the final number */
+    min-height: 3rem; /* Keeps height consistent during count */
+  }
+  
+  .counter-label {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    color: #E78D4D;
+    font-weight: 700; /* or whatever suits your design */
+  }
+  
