@@ -15,7 +15,6 @@
   h2 {
     font-size: 40px;
     text-align: center;
-    margin-bottom: 50px;
     color: #313D92;
     font-weight: 700;
     position: relative;
@@ -25,10 +24,12 @@
   }
   
   .mentors-container {
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     gap: 50px;
     padding: 0 4vw;
+    
   }
   
   .mentor-item {
@@ -39,6 +40,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 75%;
     flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
     /* Removed margin */
   }
@@ -88,27 +90,34 @@
   
   .become-a-mentor {
     text-align: center;
-    margin-top: 50px;
+    margin: 150px auto 50px auto; /* top, left/right, bottom */
+    background-color: #ffffff;
+    padding: 75px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    position: relative;
   }
+  
   
   .become-a-mentor p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
   
   .btn-apply {
-    padding: 10px 20px;
-    background-color: #313D92;
-    color: #fff;
+    padding: 12px 25px;
+    background-color: #E78D4D;
+    color: white;
+    font-weight: 600;
+    border-radius: 15px;
     text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.1s ease-in-out;
   }
   
   .btn-apply:hover {
-    background-color: #2a358d;
-  }
+    background-color: #313D92;
+   }
   
   /* Responsif untuk perangkat lebih kecil */
   @media (max-width: 768px) {
