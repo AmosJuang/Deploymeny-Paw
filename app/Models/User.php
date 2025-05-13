@@ -7,10 +7,25 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = false; // Non-incremental ID
+
+    /**
+     * The data type of the primary key.
+     *
+     * @var string
+     */
+    protected $keyType = 'string'; // ID berupa string (UUID)
 
     /**
      * The attributes that are mass assignable.
@@ -42,4 +57,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Boot function to generate UUID for the primary key.
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        // Generate UUID saat membuat user baru
+        static::creating(function ($model) {
+            $model->id = (string) Str::uuid();
+        });
+    }
 }
