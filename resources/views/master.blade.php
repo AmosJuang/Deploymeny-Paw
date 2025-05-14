@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/program.css">
     <link rel="stylesheet" href="/css/mentor.css">
+    <link rel="stylesheet" href="/css/beasiswa.css">
     
     <script src="{{ asset('js/home.js') }}"></script>
 </head>

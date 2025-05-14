@@ -9,6 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Str;
 
+use App\Models\Scholarship; // Tambahkan import ini
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -70,4 +72,11 @@ class User extends Authenticatable
             $model->id = (string) Str::uuid();
         });
     }
+
+    // Relasi many-to-many dengan tabel scholarships
+    public function scholarships()
+    {
+        return $this->belongsToMany(Scholarship::class, 'scholarship_user');
+    }
+    
 }
