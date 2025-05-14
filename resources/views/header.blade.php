@@ -14,13 +14,15 @@
             </div>
             <div class="nav-right">
                 @if(Auth::check())
-                    <!-- Jika  sudah login -->
+                    <!-- Jika sudah login -->
                     <div class="profile-menu">
                         <a href="#" class="profile-icon">
-                            <img src="/images/profile-icon.png" alt="Profile" />
+                            <div class="default-avatar">
+                                <span>{{ substr(Auth::user()->name, 0, 1) }}</span>
+                            </div>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="profile">Profile</a></li>
+                            <li><a href="{{ route('profile') }}">Profile</a></li>
                             <li>
                                 <form action="{{ route('logout') }}" method="POST">
                                     @csrf
@@ -52,28 +54,49 @@
         cursor: pointer;
     }
 
+    .default-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #3C1E86;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .profile-icon {
+        text-decoration: none;
+    }
+
     .dropdown-menu {
         display: none;
         position: absolute;
         right: 0;
+        top: 50px;
         background-color: #fff;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         list-style: none;
         padding: 10px 0;
         z-index: 1000;
+        min-width: 150px;
     }
 
-    .profile-menu:hover .dropdown-menu {
+    .dropdown-menu.show {
         display: block;
     }
 
     .dropdown-menu li {
-        padding: 10px 20px;
+        padding: 0;
     }
 
     .dropdown-menu li a,
     .dropdown-menu li button {
+        padding: 10px 20px;
         text-decoration: none;
         color: #333;
         display: block;
@@ -100,7 +123,7 @@
             dropdownMenu.classList.toggle('show');
         });
 
-        // Tutup dropdown jika pengguna mengklik di luar menu
+     
         document.addEventListener('click', function (e) {
             if (!profileIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
                 dropdownMenu.classList.remove('show');
