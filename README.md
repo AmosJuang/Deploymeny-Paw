@@ -10,3 +10,6 @@ Note untuk migrasi database :
 1.  Jalankan php artisam migrate
 2.  Ganti file untuk buat users table sama isi migrasi users table/table lain yang kubuat
 3.  jalanin php artisan migrate:fresh
+4. Jalanin php artisan db:seed --class=ScholarshipSeeder
+5. Pastiin data dah masuk (ke artisan tinkerer, mysql cli, bebas yang penting mysql kalian) barutu select * from scholarships;
+   
