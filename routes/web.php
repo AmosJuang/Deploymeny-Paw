@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ScholarshipController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', [BlogController::class, 'home']); // 👈 changed from 'index' to 'home'
 Route::get('/home', [BlogController::class, 'home']);
@@ -25,3 +26,7 @@ Route::get('/forget-password', function () {
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/beasiswa', [ScholarshipController::class, 'index'])->name('beasiswa.index');
 Route::post('/beasiswa/{id}/register', [ScholarshipController::class, 'register'])->name('beasiswa.register');
+Route::get('/profile', [ProfileController::class, 'index'])
+    ->middleware('auth')
+    ->name('profile');
+
