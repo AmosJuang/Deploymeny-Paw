@@ -1,0 +1,150 @@
+.scholarship-page {
+    padding: 50px;
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #fff;
+    background-color: #313D92;
+    border-radius: 8px;
+}
+
+.search-sort {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  /* Added gap for better spacing between search and sort */
+    margin-bottom: 20px;
+}
+
+.search-input, .sort-select {
+    width: 48%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+
+.scholarship-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.scholarship-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;  /* Menghindari elemen keluar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.scholarship-card:hover {
+    transform: scale(1.05); /* Adds hover effect */
+}
+
+.card-image {
+    width: 100%;
+    height: 180px; /* Fixed height for image container */
+    overflow: hidden; /* Ensures no overflow outside the container */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Makes sure the image is fully visible */
+    background-color: #fff;
+    margin: 0; /* Removes any extra margin */
+    border-radius: 8px;
+}
+
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.scholarship-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #313D92;
+}
+
+.scholarship-dates {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.scholarship-organization {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.btn-beasiswa {
+    width: 100%;
+    padding: 12px;
+    background-color: #E78D4D;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-beasiswa:hover {
+    background-color: #b46f3e;
+}
+.btn-sort-search {
+    padding: 12px 20px;  /* Add horizontal padding for better spacing */
+    background-color: #313D92;
+    color: white;
+    font-size: 16px;
+    font-weight: 600; /* Make the text bold for better readability */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;  /* Ensure the text is centered */
+    width: auto;  /* Make the button size adaptive */
+}
+
+.btn-sort-search:hover {
+    background-color: #1a204d;  /* Darken the button on hover */
+}
+
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
