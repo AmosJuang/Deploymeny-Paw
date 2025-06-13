@@ -21,12 +21,14 @@
 
     <!-- Search and Sort Section -->
     <div class="search-sort">
-        <input type="text" class="search-input" placeholder="Cari Beasiswa">
-        <select class="sort-select">
-            <option value="name">Sortir</option>
-            <option value="open_registration">Tanggal Pendaftaran</option>
-            <option value="deadline">Deadline</option>
-        </select>
+        <form id="searchForm" action="{{ route('beasiswa.search') }}" method="GET">
+            <input type="text" name="search" id="searchInput" class="search-input" placeholder="Cari Beasiswa" value="{{ request('search') }}">
+            <select name="sort" id="sortSelect" class="sort-select" onchange="this.form.submit()">
+                <option value="name" {{ request('sort') == 'name' ? 'selected' : '' }}>Sortir</option>
+                <option value="open_registration" {{ request('sort') == 'open_registration' ? 'selected' : '' }}>Tanggal Pendaftaran</option>
+                <option value="deadline" {{ request('sort') == 'deadline' ? 'selected' : '' }}>Deadline</option>
+            </select>
+        </form>
     </div>
 
     <!-- Scholarship Grid -->
@@ -56,4 +58,24 @@
         @endforeach
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+document.getElementById('searchInput').addEventListener('input', debounce(function() {
+    document.getElementById('searchForm').submit();
+}, 500));
+
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+</script>
 @endsection

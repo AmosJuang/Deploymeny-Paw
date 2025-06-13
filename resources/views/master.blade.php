@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/css/program.css">
     <link rel="stylesheet" href="/css/mentor.css">
     <link rel="stylesheet" href="/css/beasiswa.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <script src="{{ asset('js/home.js') }}"></script>
 </head>
@@ -20,8 +22,6 @@
     <div class="container">
         @yield('content')
     </div>
- 
-    @include('footer')
+    @yield('scripts')
 </body>
 </html>
- 

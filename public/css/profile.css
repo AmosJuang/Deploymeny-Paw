@@ -69,3 +69,33 @@
     margin: 5px 0;
     font-size: 0.9em;
 }
+
+.btn-edit-profile {
+    display: inline-block;
+    margin: 10px 0 20px 0;
+    padding: 8px 18px;
+    background: #3b5998;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+.btn-edit-profile:hover {
+    background: #2d4373;
+}
+
+.btn-delete-account {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+.btn-delete-account:hover {
+    background: #c0392b;
+}

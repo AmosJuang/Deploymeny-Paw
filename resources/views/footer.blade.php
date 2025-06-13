@@ -1,5 +1,6 @@
 <footer class="site-footer">
   <div class="footer-container">
+    
 
     <!-- LEFT SIDE: Mascot + Contact -->
     <div class="footer-left">

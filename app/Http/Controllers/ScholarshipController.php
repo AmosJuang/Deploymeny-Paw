@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Scholarship;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Notifications\ScholarshipRegistrationNotification;
 
 class ScholarshipController extends Controller
 {
@@ -32,28 +33,38 @@ class ScholarshipController extends Controller
     // Handle user registration for a scholarship
     public function register($id)
     {
-        // Check if the user is logged in
-        if (!auth()->check()) {
-            // Save the scholarship ID to session for redirection after login
-            session(['redirect_after_login' => route('beasiswa.register', $id)]);
-            
-            return redirect()->route('login')
-                ->with('error', 'Silakan login untuk mendaftar beasiswa ini.');
-        }
-
-        $user = auth()->user();
         $scholarship = Scholarship::findOrFail($id);
-
-        // Check if the user has already registered for this scholarship
-        if ($user->scholarships()->where('scholarship_id', $id)->exists()) {
-            return redirect()->back()
-                ->with('error', 'Anda sudah mendaftar ke beasiswa ini.');
+        $user = auth()->user();
+        
+        // Check if already registered
+        if($user->scholarships()->where('scholarship_id', $id)->exists()) {
+            return back()->with('error', 'Anda sudah terdaftar di beasiswa ini.');
         }
-
-        // Register the user for the scholarship
+        
+        // Register for scholarship
         $user->scholarships()->attach($id);
+        
+        // Send notification
+        $user->notify(new ScholarshipRegistrationNotification($scholarship));
+        
+        return back()->with('success', 'Berhasil mendaftar beasiswa.');
+    }
 
-        return redirect()->back()
-            ->with('success', 'Anda berhasil mendaftar ke beasiswa ini!');
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        $sort = $request->input('sort', 'name');
+
+        $scholarships = Scholarship::query()
+            ->when($search, function ($query, $search) {
+                return $query->where('name', 'like', "%{$search}%")
+                            ->orWhere('organization', 'like', "%{$search}%");
+            })
+            ->when($sort, function ($query, $sort) {
+                return $query->orderBy($sort);
+            })
+            ->get();
+
+        return view('blog.beasiswa', compact('scholarships'));
     }
 }
