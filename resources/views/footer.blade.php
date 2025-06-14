@@ -1,28 +1,32 @@
 <footer class="site-footer">
   <div class="footer-container">
     
-
-    <!-- LEFT SIDE: Mascot + Contact -->
+    <!-- KIRI: Bagian maskot + info kontak -->
     <div class="footer-left">
-      <!-- Mascot -->
+
+      <!-- Gambar maskot UBeasiswa -->
       <div class="footer-section footer-mascot">
         <img src="/images/Footer.png" alt="UBeasiswa Mascot" />
       </div>
 
-      <!-- Contact Info -->
+      <!-- Informasi kantor dan kontak -->
       <div class="footer-section footer-contact">
         <h3>Kantor</h3>
-        <p>Jl. Veteran No.10-11,<br>
-           Ketawanggede, Kec. Lowokwaru,<br>
-           Kota Malang, Jawa Timur 65145</p>
+        <p>
+          Jl. Veteran No.10-11,<br>
+          Ketawanggede, Kec. Lowokwaru,<br>
+          Kota Malang, Jawa Timur 65145
+        </p>
 
         <h3>Hubungi Kami</h3>
         <p>@UBeasiswa</p>
+
+        <!-- Hak cipta WKWKKWKWKW-->
         <p class="copyright">&copy; 2025 - UBeasiswa. All rights reserved.</p>
       </div>
     </div>
 
-    <!-- RIGHT SIDE: Branding -->
+    <!-- KANAN: Branding -->
     <div class="footer-section footer-brand">
       <h1>UBeasiswa</h1>
     </div>
