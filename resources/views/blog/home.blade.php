@@ -4,19 +4,23 @@
 
 @section('content')
 
+<!-- 1. Section Selamat Datang dengan Maskot -->
 <section class="mascot-welcome" id="welcome">
     <div class="container">
+        <!-- Konten sebelah kiri -->
         <div class="left-content">
             <p>Discover <span class="highlight">the path</span> to your dream</p>
             <h1>Scholarship</h1>
-            <a onclick="scrollToNextSection()">Lihat Selengkapnya</a>            </div>
+            <!-- Tombol scroll ke section selanjutnya -->
+            <a onclick="scrollToNextSection()">Lihat Selengkapnya</a>
+        </div>
+        <!-- Gambar Maskot dan Dekorasi -->
         <img src="/images/Home1.png" alt="Mascot" class="mascot-image">
         <img src="/images/Home2.png" alt="Dekor" class="dekor-image">
     </div>
 </section>
 
-
-<!-- 2. Why Choose Us Section -->
+<!-- 2. Section Mengapa Memilih UBeasiswa -->
 <section class="why-choose">
     <div class="why-title">
         <h2>Mengapa Harus UBeasiswa? 🤔</h2>
@@ -43,54 +47,62 @@
     </div>
 </section>
 
-
-<!-- 3. Our Program Section -->
+<!-- 3. Section Program Unggulan -->
 <section class="our-program">
   <div class="container">
     <h2>Program Kami</h2>
 
-    <!-- Program Highlight Slider -->
+    <!-- Kotak Highlight Program -->
     <div class="program-highlight-box">
-  <div class="highlight-content">
-    <img id="highlight-image" src="/images/highlight1.png" alt="Highlight">
+        <div class="highlight-content">
+            <!-- Gambar program -->
+            <img id="highlight-image" src="/images/highlight1.png" alt="Highlight">
 
-    <div class="highlight-overlay">
-      <div id="highlight-text" class="highlight-text">Scholarship Fair 2025</div>
-      <div id="highlight-desc" class="highlight-desc">Bergabung dalam acara tahunan yang mempertemukan kamu dengan berbagai penyedia beasiswa global.</div>
-      <a class="highlight-btn" href="program">Yuk Intip Keseruannya >></a>
-    </div>
-  </div>
-</div>
-
-
-<!-- 4. Country Map & Counter -->
-<section class="impact-map" id="impact-map">
-    <div class="container">
-        <h2>Maju Bersama UBeasiswa!</h2>
-        <div class="map-wrapper">
-            <img src="/images/indonesia-map.png" alt="Peta Indonesia" class="country-map">
-            <div class="counter-overlay">
-  <div class="counter-box">
-    <div class="counter-number" data-target="3000">0</div>
-    <div class="counter-label">Peserta</div>
-  </div>
-  <div class="counter-box">
-    <div class="counter-number" data-target="90">0</div>
-    <div class="counter-label">Universitas</div>
-  </div>
-  <div class="counter-box">
-    <div class="counter-number" data-target="55">0</div>
-    <div class="counter-label">Kota/Kabupaten</div>
-  </div>
-</div>
-
+            <!-- Overlay teks di atas gambar -->
+            <div class="highlight-overlay">
+                <div id="highlight-text" class="highlight-text">Scholarship Fair 2025</div>
+                <div id="highlight-desc" class="highlight-desc">
+                    Bergabung dalam acara tahunan yang mempertemukan kamu dengan berbagai penyedia beasiswa global.
+                </div>
+                <!-- Tombol untuk menuju halaman program -->
+                <a class="highlight-btn" href="program">Yuk Intip Keseruannya >></a>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- 4. Section Dampak & Statistik -->
+<section class="impact-map" id="impact-map">
+    <div class="container">
+        <h2>Maju Bersama UBeasiswa!</h2>
+
+        <div class="map-wrapper">
+            <!-- Gambar peta -->
+            <img src="/images/indonesia-map.png" alt="Peta Indonesia" class="country-map">
+
+            <!-- Statistik dampak UBeasiswa -->
+            <div class="counter-overlay">
+                <div class="counter-box">
+                    <div class="counter-number" data-target="3000">0</div>
+                    <div class="counter-label">Peserta</div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-number" data-target="90">0</div>
+                    <div class="counter-label">Universitas</div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-number" data-target="55">0</div>
+                    <div class="counter-label">Kota/Kabupaten</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Script scroll ke section program -->
 <script>
   function scrollToNextSection() {
-    const nextSection = document.querySelector('.our-program'); // or whatever section you're scrolling to
+    const nextSection = document.querySelector('.our-program');
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: 'smooth' });
     }
